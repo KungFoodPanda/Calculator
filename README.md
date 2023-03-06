@@ -1,16 +1,18 @@
-{
+
+
 private void btnCalculate_Click(object sender, EventArgs e)
 {
-   
+
     string num1Text = txtNum1.Text;
     string num2Text = txtNum2.Text;
     string symbolText = lblSymbol.Text;
-
+    
     if (num1Text.Contains("+") || num1Text.Contains("-") || num1Text.Contains("*") || num1Text.Contains("/"))
     {
         MessageBox.Show("Number 1 contains a symbol!", "Error");
         return;
     }
+    
     if (num2Text.Contains("+") || num2Text.Contains("-") || num2Text.Contains("*") || num2Text.Contains("/"))
     {
         MessageBox.Show("Number 2 contains a symbol!", "Error");
@@ -62,4 +64,4 @@ private void btnDivide_Click(object sender, EventArgs e)
 {
     lblSymbol.Text = "/";
 }
-}
+
