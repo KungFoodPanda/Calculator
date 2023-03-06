@@ -1,6 +1,6 @@
 # Calculator
 Calculator
-
+//
 private void btnCalculate_Click(object sender, EventArgs e)
 {
     // Get the numbers and symbol from the textboxes and label
@@ -72,3 +72,4 @@ private void btnDivide_Click(object sender, EventArgs e)
 {
     lblSymbol.Text = "/";
 }
+//
