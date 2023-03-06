@@ -1,4 +1,4 @@
-
+{
 private void btnCalculate_Click(object sender, EventArgs e)
 {
    
@@ -62,4 +62,4 @@ private void btnDivide_Click(object sender, EventArgs e)
 {
     lblSymbol.Text = "/";
 }
-
+}
