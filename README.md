@@ -65,3 +65,48 @@ private void btnDivide_Click(object sender, EventArgs e)
     lblSymbol.Text = "/";
 }
 
+---------------------------------------------------------------------------------
+private void btnConvert_Click_Click(object sender, EventArgs e)
+        {
+            double amount = double.Parse(txtAmount.Text);
+
+            string fromCurrency = cmbFromCurrency.SelectedItem.ToString();
+            string toCurrency = cmbToCurrency.SelectedItem.ToString();
+
+            double convertedAmount = 0;
+            switch (fromCurrency)
+            {
+                case "Rubles":
+                    if (toCurrency == "Euro")
+                    {
+                        convertedAmount = amount / 90; 
+                    }
+                    else if (toCurrency == "Dollars")
+                    {
+                        convertedAmount = amount / 75; 
+                    }
+                    break;
+                case "Euro":
+                    if (toCurrency == "Rubles")
+                    {
+                        convertedAmount = amount * 90; 
+                    }
+                    else if (toCurrency == "Dollars")
+                    {
+                        convertedAmount = amount * 1.2; 
+                    }
+                    break;
+                case "Dollars":
+                    if (toCurrency == "Rubles")
+                    {
+                        convertedAmount = amount * 75; 
+                    }
+                    else if (toCurrency == "Euro")
+                    {
+                        convertedAmount = amount / 1.2; 
+                    }
+                    break;
+            }
+
+            lblResult.Text = convertedAmount.ToString("0.00") + " " + toCurrency;
+        }
