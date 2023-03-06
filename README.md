@@ -68,8 +68,8 @@ private void btnDivide_Click(object sender, EventArgs e)
 ---------------------------------------------------------------------------------
 private void btnConvert_Click_Click(object sender, EventArgs e)
         {
+        
             double amount = double.Parse(txtAmount.Text);
-
             string fromCurrency = cmbFromCurrency.SelectedItem.ToString();
             string toCurrency = cmbToCurrency.SelectedItem.ToString();
 
